@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://nlp.stanford.edu/projects/snli/ -->
+<html class=" js inlinesvg"><!--<![endif]-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+
+		<title>The TableBank Dataset</title>
+
+		<!-- Bootstrap styles -->
+		<link rel="stylesheet" href="./TableBank_files/bootstrap.css">
+
+		<!-- Glyphicons -->
+		<link rel="stylesheet" href="./TableBank_files/glyphicons.css">
+		<link rel="stylesheet" href="./TableBank_files/filetypes.css">
+		<link rel="stylesheet" href="./TableBank_files/social.css">
+
+		<!-- Google Webfonts -->
+		<link href="./TableBank_files/css" rel="stylesheet" type="text/css">
+
+		<!-- fontawesome -->
+		<link rel="stylesheet" href="./TableBank_files/font-awesome.min.css">
+
+		<link rel="stylesheet" href="./TableBank_files/bootstrap-markdown.min.css" type="text/css">
+
+		<!-- LayerSlider styles -->
+		<link rel="stylesheet" href="./TableBank_files/layerslider.css" type="text/css">
+
+		<!-- twitter -->
+		<meta property="twitter:account_id" content="118263124">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@stanfordnlp">
+		<meta name="twitter:title" content="The Stanford NLP Group">
+		<meta name="twitter:description" content="Performing groundbreaking
+		Natural Language Processing research since 1999.">
+		<meta name="twitter:image" content="http://nlp.stanford.edu/software/stanford-dependencies/brownback-uncollapsed.png">
+		<meta name="twitter:url" content="http://nlp.stanford.edu/">
+		<!-- Google analytics -->
+		<script type="text/javascript" async="" src="./TableBank_files/ga.js.download"></script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23880590-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); 
+				ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 
+					'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; 
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+
+		<!-- Grove Styles (switch for different color schemes, e.g. "styles-cleanblue.css") -->
+		<link rel="stylesheet" href="./TableBank_files/styles-cleanred.css" id="grove-styles">
+
+		<link rel="stylesheet" href="./TableBank_files/jquery.dataTables.min.css" type="text/css">
+
+		<!-- table highlighting -->
+		<!--<link rel="stylesheet" href="//cdn.datatables.net/plug-ins/1.10.7/features/searchHighlight/dataTables.searchHighlight.css">-->
+
+		<!-- site-wide custom css -->
+		<link rel="stylesheet" href="./TableBank_files/nlp.css" id="nlp-styles"> 
+
+	    <!--[if lt IE 9]>
+	        <link rel="stylesheet" href="css/ie8.css">        
+	        <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
+	    <![endif]-->
+
+	    <script src="./TableBank_files/jquery.min.js.download"></script>
+	    <script>window.jQuery || document.write('<script src="static/js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+	    <!-- jQuery with jQuery Easing, and jQuery Transit JS -->
+
+	    <!-- LayerSlider from Kreatura Media with Transitions -->
+	    <script src="./TableBank_files/greensock.js.download" type="text/javascript"></script>
+	    <script src="./TableBank_files/layerslider.transitions.js.download" type="text/javascript"></script>
+	    <script src="./TableBank_files/layerslider.kreaturamedia.jquery.js.download" type="text/javascript"></script>
+
+	    <!-- Bootstrap Markdown for Blog editing-->
+	    <script src="./TableBank_files/markdown.js.download" type="text/javascript"></script>
+	    <script src="./TableBank_files/to-markdown.js.download" type="text/javascript"></script>
+	    <script src="./TableBank_files/bootstrap-markdown.js.download" type="text/javascript"></script>
+
+	    <!-- Grove Layerslider initiation script -->
+	    <script src="./TableBank_files/grove-slider.js.download" type="text/javascript"></script>
+
+	    <!-- DataTables.net for publications -->
+	    <script src="./TableBank_files/jquery.dataTables.min.js.download"></script>
+
+	    <!-- highlighting for tables -->
+	    <script src="./TableBank_files/dataTables.searchHighlight.min.js.download"></script>    
+	    <script src="./TableBank_files/jquery.highlight.js.download"></script>
+	    
+	</head> 
+	<body>
+
+		<!-- navigation -->
+		<header>
+			<nav class="navbar navbar-default grove-navbar" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<!-- <a href="https://nlp.stanford.edu/projects/snli/#" class="grove-toggle collapsed" data-toggle="collapse" data-target=".grove-nav">   <i class="glyphicons show_lines"></i>  </a> -->
+						<!-- <img class="navbar-brand navbar-left hidden-xs" src="./TableBank_files/nlp-logo-small.gif"> -->
+						<a class="navbar-brand navbar-left">
+							<h3 class="hidden-xs hidden-sm">MSRA NLC Group</h3>
+							<h3 class="hidden-md hidden-lg hidden-xl">MSRA NLC Group</h3>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+
+
+		<div class="widewrapper">
+			<!--<div class="container" id="maincontent">-->
+			<div id="body_content">
+				<div class="widewrapper pagetitle">
+					<div class="container">
+
+					</div>
+				</div>
+
+
+				<div class="widewrapper weak-highlight">
+					<div class="container content">
+						<center>
+							<h1>The TableBank Dataset</h1>
+						</center>
+
+						<h2>The Dataset</h2>
+							<p>
+								TableBank is a new image-based table detection and recognition dataset built with novel weak supervision from Word and Latex documents on the internet, contains 417K high-quality labeled tables.
+							</p>
+						<h2>Introduction</h2>
+
+							<p>
+								The TableBank dataset totally consists of 417,234 high quality labeled tables as well as their original documents in a variety of domains.
+							</p>
+
+							<p>
+								The following paper introduces the corpus in detail. If you use the corpus in published work, please cite it:
+							</p>
+
+							<blockquote>
+								Minghao Li,
+								Lei Cui,
+								Shaohan Huang,
+								Furu Wei,
+								Ming Zhou,
+								and Zhoujun Li.
+								2019.
+								TableBank: Table Benchmark for Image-based Table Detection and Recognition.
+								<!-- In <i>Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP)</i>. -->
+								[<a href=https://arxiv.org/pdf/1903.01949">pdf</a>]
+							</blockquote>
+
+							<h3>Statistics of TableBank</h3>
+
+							<table class="newstuff">
+								<tr>
+									<th>Task</th>
+									<th>Word</th>
+									<th>Latex</th>
+									<th>Word+Latex</th>
+								</tr>
+								<tr>
+									<td>Table detection</td>
+									<td>163,417</td>
+									<td>253,817</td>
+									<td>417,234</td>
+								</tr>
+								<tr>
+									<td>Table structure recognition</td>
+									<td>56,866</td>
+									<td>88,597</td>
+									<td>145,463</td>
+								</tr>
+							</table>
+
+						<h2>Get Data</h2>
+
+							<p>
+								Table Detectrion part is provided by COCO format while table structure recognition part is distributed in both image files and corresponding txt files. Here is the github repository with a readme:
+							</p>
+							<blockquote>
+								<p>
+									<a href="https://github.com/doc-analysis/TableBank">https://github.com/doc-analysis/TableBank</a>
+								</p>
+
+								<p>
+									If you want to get data, Please fill this <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRw1hSTX2waZIoerSk1J6CyNUMTRCUEZCR0lVOVZaTVhLUFVJTjhJUkdXSi4u">form</a>. If the review is approved, the download link will be sent to your email address.
+								</p>
+							</blockquote>
+
+							<p>
+								TableBank is released under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivs License</a>. You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may not use the material for commercial purposes. If you remix, transform, or build upon the material, you may not distribute the modified material.
+							</p>
+						
+
+						<h2>Published results</h2>
+
+							The following table reflects the performance on the two part dataset. For table detection, we calculate the precision, recall and F1 in the same way as in [Gilani et al., 2017], where the metrics for all documents are computed by summing up the area of overlap, prediction and ground truth. For table structure recognition, we use the 4-gram BLEU score as the evaluation metric with a single reference. If you would like to add a paper that reports a number at or above the current state of the art, email <a href="mailto:liminghao1630@buaa.edu.cn">Minghao</a> and <a href="mailto:lecu@microsoft.com">Lei</a>.
+
+							<h3>Table Detectrion</h3>
+
+							<blockquote>
+								<table class="newstuff">
+
+									<tbody>
+										<tr class="header">
+											<th>Publication</th>
+											<th>&nbsp;Model</th>
+											<th>Parameters</th>
+											<th>&nbsp;Train (% acc)</th>
+											<th>&nbsp;Test (% acc)</th>
+										</tr>
+
+										<!-- <tr class="section">
+											<th colspan="5" style="background-color:transparent; color:#646464;">Feature-based models</th>
+										</tr>
+
+										<tr>
+											<td><a href="http://nlp.stanford.edu/pubs/snli_paper.pdf">Bowman et al. '15</a></td>
+											<td>Unlexicalized features</td>
+											<td></td>
+											<td style="text-align: right">49.4</td>
+											<td style="text-align: right">50.4</td>
+										</tr> -->
+
+									</tbody>
+								</table>
+							</blockquote>
+
+							<h3>Table Structure Recognition</h3>
+
+							<blockquote>
+								<table class="newstuff">
+
+									<tbody>
+										<tr class="header">
+											<th>Publication</th>
+											<th>&nbsp;Model</th>
+											<th>Parameters</th>
+											<th>&nbsp;Train (% acc)</th>
+											<th>&nbsp;Test (% acc)</th>
+										</tr>
+
+										<!-- <tr class="section">
+											<th colspan="5" style="background-color:transparent; color:#646464;">Feature-based models</th>
+										</tr>
+
+										<tr>
+											<td><a href="http://nlp.stanford.edu/pubs/snli_paper.pdf">Bowman et al. '15</a></td>
+											<td>Unlexicalized features</td>
+											<td></td>
+											<td style="text-align: right">49.4</td>
+											<td style="text-align: right">50.4</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</blockquote>
+
+						<h2>Related Resources</h2>
+
+						<ul>
+							<li>[Gilani et al., 2017] A. Gilani, S. R. Qasim, I. Malik, and F. Shafait. Table detection using deep learning. In Proc. of ICDAR 2017, volume 01, pages 771–776, Nov 2017.</li>
+						</ul>
+
+						<!-- <br/> -->
+						<h2>Contact Information</h2>
+
+						<p>
+							For any comments or questions, please  email <a href="mailto:liminghao1630@buaa.edu.cn">Minghao</a> and <a href="mailto:lecu@microsoft.com">Lei</a>.
+						</p>
+
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+
+		<footer>
+			<div id="footer" class="container">
+				<footer class="widewrapper footer">
+					<div class="container">
+						<div class="row footer">
+
+							<div class="col-sm-3">
+								<h4>MSRA NLC Group</h4>
+								Building 2, No.5 Dan Ling Street,<br>
+								Haidian District,<br>
+								Beijing, 100080<br>
+								China<br>
+							</div>
+
+							<div class="col-sm-3">
+								<h4>Connect</h4>
+
+								<div class="row">
+									<ul>
+										<li><a href="https://github.com/doc-analysis/TableBank">Github</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div><!-- /footer -->
+		</footer>
+		<script src="./TableBank_files/bootstrap.min.js.download"></script>
+		<script src="./TableBank_files/modernizr.js.download"></script>
+
+
+		<script>
+			$('ul.nav > li > a[href="' + document.location.pathname + '"]').parent().addClass('active');
+		</script>
+
+	</body>
+</html>
