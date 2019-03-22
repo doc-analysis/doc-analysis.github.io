@@ -192,6 +192,12 @@
 
 							The following table reflects the performance on the two part dataset. For table detection, we calculate the precision, recall and F1 in the same way as in [Gilani et al., 2017], where the metrics for all documents are computed by summing up the area of overlap, prediction and ground truth. For table structure recognition, we use the 4-gram BLEU score as the evaluation metric with a single reference. If you would like to add a paper that reports a number at or above the current state of the art, email <a href="mailto:liminghao1630@buaa.edu.cn">Minghao Li</a> and <a href="mailto:lecu@microsoft.com">Lei Cui</a>.
 
+							<blockquote>
+								<b>
+									Because some data has copyright issues and should not be released, we filtered all the data and excluded them. We also retrain all the baseline model on the changed dataset and list them below.
+								</b>
+							</blockquote>
+
 							<h3>Table Detection</h3>
 
 							<blockquote>
@@ -208,13 +214,54 @@
 											<th>&nbsp;Test F1(%)</th>
 										</tr>
 
-										<!-- <tr>
+										<tr>
 											<td><a>Baseline</a></td>
-											<td>Faster R-CNN ResNeXt-152</td>
-											<td style="text-align: right">0.9657</td>
-											<td style="text-align: right">91.2</td>
-											<td style="text-align: right">88.0</td>
-										</tr> -->
+											<td>Faster R-CNN ResNeXt-101(word+latex)</td>
+											<td style="text-align: right">95.93</td>
+											<td style="text-align: right">90.44</td>
+											<td style="text-align: right">93.11</td>
+										</tr>
+
+										<tr>
+											<td><a>Baseline</a></td>
+											<td>Faster R-CNN ResNeXt-152(word+latex)</td>
+											<td style="text-align: right">96.72</td>
+											<td style="text-align: right">88.95</td>
+											<td style="text-align: right">92.67</td>
+										</tr>
+
+										<tr>
+											<td><a>Baseline</a></td>
+											<td>Faster R-CNN ResNeXt-152(latex)</td>
+											<td style="text-align: right">87.20</td>
+											<td style="text-align: right">96.24</td>
+											<td style="text-align: right">91.49</td>
+										</tr>
+
+										<tr>
+											<td><a>Baseline</a></td>
+											<td>Faster R-CNN ResNeXt-101(latex)</td>
+											<td style="text-align: right">87.44</td>
+											<td style="text-align: right">95.12</td>
+											<td style="text-align: right">91.12</td>
+										</tr>
+
+										<tr>
+											<td><a>Baseline</a></td>
+											<td>Faster R-CNN ResNeXt-152(word)</td>
+											<td style="text-align: right">96.50</td>
+											<td style="text-align: right">80.32</td>
+											<td style="text-align: right">87.67</td>
+										</tr>
+
+
+										<tr>
+											<td><a>Baseline</a></td>
+											<td>Faster R-CNN ResNeXt-101(word)</td>
+											<td style="text-align: right">95.77</td>
+											<td style="text-align: right">76.10</td>
+											<td style="text-align: right">84.81</td>
+										</tr>
 
 									</tbody>
 								</table>
@@ -231,9 +278,25 @@
 											<th>&nbsp;Model</th>
 											<!-- <th>Parameters</th> -->
 											<!-- <th>&nbsp;Train (% acc)</th> -->
-											<th>&nbsp;Test Precision(%)</th>
-											<th>&nbsp;Test Recall(%)</th>
-											<th>&nbsp;Test F1(%)</th>
+											<th>&nbsp;BLEU</th>
+										</tr>
+
+										<tr>
+											<td><a>Baseline</a></td>
+											<td>Image-to-Markup(word+latex)</td>
+											<td style="text-align: right">0.7212</td>
+										</tr>
+
+										<tr>
+											<td><a>Baseline</a></td>
+											<td>Image-to-Markup(word)</td>
+											<td style="text-align: right">0.6527</td>
+										</tr>
+
+										<tr>
+											<td><a>Baseline</a></td>
+											<td>Image-to-Markup(latex)</td>
+											<td style="text-align: right">0.5818</td>
 										</tr>
 
 									</tbody>
