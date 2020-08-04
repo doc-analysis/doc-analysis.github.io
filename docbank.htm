@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://www.cs.cmu.edu/~aharley/rvl-cdip/ -->
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<style>
+		td,
+		th {
+			background: #f0f0f0;
+			text-align: center;
+		}
+
+		#labels {
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.5em;
+			z-index: 5;
+		}
+
+		.label {
+			float: left;
+			width: 12.5%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.twoline {
+			line-height: 1em;
+			margin-top: -0.75em;
+			padding-bottom: 0.5em;
+		}
+	</style>
+	<link href="./DocBank Dataset_files/projectPage.css" rel="stylesheet" type="text/css">
+	<script async="" src="./DocBank Dataset_files/analytics.js"></script>
+	<script async="" src="./DocBank Dataset_files/analytics.js"></script>
+	<script type="text/javascript" src="./DocBank Dataset_files/jquery-1.11.1.min.js"></script>
+
+	<link href="./DocBank Dataset_files/css" rel="stylesheet" type="text/css">
+	<title>DocBank Dataset</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="page">
+			<div id="pageContent">
+				<h1>The DocBank Dataset</h1>
+				<p>Minghao Li, Yiheng Xu, Lei Cui, Shaohan Huang, Furu Wei, Zhoujun Li, Ming Zhou</p>
+				<p>DocBank is a new large-scale dataset that is constructed using a weak supervision approach. It
+					enables models to integrate both the textual and layout information for downstream tasks. The
+					current DocBank dataset totally includes 500K document pages, where 400K for training, 50K for
+					validation and 50K for testing.
+				</p>
+				<p>Here are Example annotations of the DocBank. </p>
+				<table>
+					<tr>
+						<td>
+							<a><img src="./DocBank Dataset_files/DSSE-sample-gt1.jpg"
+									style="width:100%; height:auto; max-width:3540px; "></a>
+						</td>
+						<td>
+							<a><img src="./DocBank Dataset_files/DSSE-sample-ori1.jpg"
+									style="width:100%; height:auto; max-width:3540px; "></a>
+						</td>
+						<td>
+							<a><img src="./DocBank Dataset_files/DSSE-sample-gt2.jpg"
+									style="width:100%; height:auto; max-width:3540px; "></a>
+						</td>
+						<td>
+							<a><img src="./DocBank Dataset_files/DSSE-sample-ori2.jpg"
+									style="width:100%; height:auto; max-width:3540px; "></a>
+						</td>
+					</tr>
+				</table>
+				<p>The colors of semantic structure labels are: </p>
+				<p>
+				<table>
+					<tr>
+						<td style="background-color:#FFB6C1;">Abstract</td>
+						<td style="background-color:#00008B; color:#FFFFFF;">Author</td>
+						<td style="background-color:#00FF00 ;">Caption</td>
+						<td style="background-color:#FF0000; color:#FFFFFF;">Equation</td>
+						<td style="background-color:#FF00FF; color:#FFFFFF;">Figure</td>
+						<td style="background-color:#FFFFFF;">Footer</td>
+						<td style="background-color:#302070; color:#FFFFFF;">List</td>
+						<td style="background-color:#B0C4DE;">Paragraph</td>
+						<td style="background-color:#309000;">Reference</td>
+						<td style="background-color:#0000FF; color:#FFFFFF;">Section</td>
+						<td style="background-color:#00FFFF;">Table</td>
+						<td style="background-color:#00BFFF;">Title</td>
+					</tr>
+				</table>
+
+				</p>				
+				<p>DocBank is a natural extension of the TableBank (<a
+						href="https://github.com/doc-analysis/TableBank">repo</a>, <a
+						href="https://arxiv.org/abs/1903.01949">paper</a>) dataset. <br>
+					LayoutLM (<a href="https://github.com/microsoft/unilm/tree/master/layoutlm">repo</a>, <a
+						href="https://arxiv.org/abs/1912.13318">paper</a>) is an effective pre-training method of text
+					and layout and archives the SOTA result on DocBank.
+				</p>
+				<h2>Download</h2>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<th>File</th>
+							<th>Size</th>
+							<th>md5sum</th>
+						</tr>
+						<tr>
+							<td><a
+									href="https://buaaeducn-my.sharepoint.com/:u:/g/personal/liminghao1630_buaa_edu_cn/ESlF5UYATl1Ihb9XIMXWyxkBVKjMilaycmyGKXamQvSJ1w?e=SqKcXs">DocBank_500K_txt.zip</a>
+							</td>
+							<td>3,167,771,976B (2.95GB)</td>
+							<td>f1e37183d43709b44b334385684fc343</td>
+						</tr>
+						<tr>
+							<td><a
+									href="https://buaaeducn-my.sharepoint.com/:f:/g/personal/liminghao1630_buaa_edu_cn/Elj7eVMf_TNHhrOlwhTyHXkBzu1elQARGMxmaRagt3_cJw?e=E9EedC">DocBank_500K_ori_img.zip</a>
+							</td>
+							<td>50,907,670,187B (47.4GB)</td>
+							<td> - </td>
+						</tr>
+					</tbody>
+				</table>
+				<h2>Annotation Format
+				</h2>
+				<p>Each line contains a token and the following information of it:
+				</p>
+				<ul>
+					<li>bounding box ((x0, y0), (x1, y1)) - > (x0, y0, x1, y1)</li>
+					<li>color (R, G, B)</li>
+					<li>font</li>
+					<li>label</li>
+				</ul>
+				<table>
+					<thead>
+						<tr>
+							<th>Index</th>
+							<th>0</th>
+							<th>1</th>
+							<th>2</th>
+							<th>3</th>
+							<th>4</th>
+							<th>5</th>
+							<th>6</th>
+							<th>7</th>
+							<th>8</th>
+							<th>9</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Content</td>
+							<td>token</td>
+							<td>x0</td>
+							<td>y0</td>
+							<td>x1</td>
+							<td>y1</td>
+							<td>R</td>
+							<td>G</td>
+							<td>B</td>
+							<td>font name</td>
+							<td>label</td>
+						</tr>
+					</tbody>
+				</table>
+				<h2>Citation</h2>
+				<p>If you use this dataset, please cite our <a href="https://arxiv.org/abs/2006.01038">paper</a>:
+				</p>
+				<div class="cite">
+					<p>DocBank: A Benchmark Dataset for Document Layout Analysis</p>
+					<p>Minghao Li, Yiheng Xu, Lei Cui, Shaohan Huang, Furu Wei, Zhoujun Li, Ming Zhou</p>
+				</div>
+				<p>Bibtex format:</p>
+				<div class="cite">
+					<code>
+						@misc{li2020docbank,<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;title={DocBank: A Benchmark Dataset for Document Layout Analysis},<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;author={Minghao Li and Yiheng Xu and Lei Cui and Shaohan Huang and Furu Wei and Zhoujun Li and Ming Zhou},<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;year={2020},<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;eprint={2006.01038},<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;archivePrefix={arXiv},<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;primaryClass={cs.CL}<br>
+						}	      
+	    			</code>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+	<!-- Minghao's tracking code -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-131758570-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+
+</body>
+
+</html>

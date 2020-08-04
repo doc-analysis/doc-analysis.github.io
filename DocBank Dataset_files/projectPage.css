@@ -1,0 +1,102 @@
+h1, h2, h3 {
+    line-height:1.5em;
+    font-weight:normal;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    //font-family: Arial, sans-serif;
+    font-size: 18px;
+    background:#fff;
+    line-height:1.5em;
+    margin: 0;
+}
+td,th {
+    font-size: 18px;
+}
+code {
+    font-size: 16px;
+}
+#container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+#page {
+    width: 100%;
+    //background-color: #fff;
+}
+#pageContent {
+    padding:20px 5% 20px 5%;
+    max-width:960px;
+    margin:0 auto;
+}
+a {
+    color:#06c;
+}
+.cite {
+    background:#f0f0f0;
+    padding:10px;
+}
+#pdf {
+    box-shadow: 0px 0px 10px #888888;
+    width:300px;
+    height:388px;
+    margin-right:20px;
+}
+#pdf:hover {
+    box-shadow: 0px 0px 10px #069;
+}
+hr {
+    margin: 20px 0;
+}
+table {
+    width: 100%;
+}
+table, th, td {
+    padding: 0;
+    vertical-align:middle;
+    color:#000;
+}
+.projectTitle {
+	padding-bottom:4px;
+}
+.projectTitle a {
+    color: #06c;
+}
+.project {
+    background-color:#f9f9f9;
+    margin-bottom: 40px;
+    //border: 1px solid #c0c0c0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.projects {
+    
+}
+.projects .image {
+    width:30%;
+    background-color:#fff;
+    //padding-right:10px;
+}
+.projects .text {
+    width:70%;
+    padding: 20px;
+}
+.hover {
+    background-color:#eeeeff;
+    //border: 1px solid #c0c0f9;
+    border-top: 1px solid #09f;
+    border-bottom: 1px solid #09f;
+}
+.feature {
+    border-top: 1px solid #09f;
+    border-bottom: 1px solid #09f;
+    padding: 0 2%; 
+    width: 96%;
+    background: #f0f6f9;
+}
+.feature img{
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
